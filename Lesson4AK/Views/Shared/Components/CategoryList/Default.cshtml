@@ -1,0 +1,10 @@
+﻿@model CategoryListViewModel
+
+<section>
+    <ul class="list-group">
+        @foreach (var category in Model.Categories)
+        {
+            <li class="list-group-item">@category.Title</li>
+        }
+    </ul>
+</section>

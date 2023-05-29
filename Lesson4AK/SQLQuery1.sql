@@ -1,0 +1,24 @@
+﻿CREATE DATABASE ProductDBAK
+GO
+USE ProductDBAK
+
+CREATE TABLE Categories(
+Id INT PRIMARY KEY IDENTITY(1,1) NOT NULL,
+Title NVARCHAR(50) NOT NULL
+)
+GO
+INSERT INTO Categories ([Title])
+VALUES('Drink'),('Beverages'),('Hot Meals'),('Junks')
+
+GO
+
+CREATE TABLE Products(
+Id INT PRIMARY KEY IDENTITY(1,1) NOT NULL,
+[Name] NVARCHAR(50) NOT NULL,
+[Price] MONEY NOT NULL DEFAULT(0)
+)
+
+GO
+
+INSERT INTO Products([Name],[Price])
+VALUES('Asus ROG',2200),('Samsung S21',1850)
